@@ -15,13 +15,16 @@ function getRoute() {
  */
 export function initRouter() {
     currentRoute = getRoute();
-    window.addEventListener('hashchange', () => {
+    
+    // Use onhashchange instead of addEventListener
+    window.onhashchange = () => {
         const newRoute = getRoute();
         if (newRoute !== currentRoute) {
             currentRoute = newRoute;
             notifyRouteChange();
         }
-    });
+    };
+    
     // Initial notification
     notifyRouteChange();
 }

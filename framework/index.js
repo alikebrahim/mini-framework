@@ -10,3 +10,6 @@ export { getState, setState, subscribe, initState } from './state.js';
 // Routing
 export { initRouter, onRouteChange, navigate } from './router.js';
 
+// Event Handling
+export { initEventSystem } from './events.js';
+
